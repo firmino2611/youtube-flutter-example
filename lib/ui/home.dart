@@ -12,6 +12,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List playlists = [];
+  List ids = [
+    'PLCKIKkYAopDLSmds7PxY35LwFe174GHb3',
+    'PLCKIKkYAopDIpanLJA0nNA1z34FQqRg5P',
+    'PLCKIKkYAopDIJB39WKoctk6eTn58eXWWJ'
+  ];
 
   @override
   void initState() {
@@ -23,11 +28,19 @@ class _HomeState extends State<Home> {
             '&channelId=UCOBIOdl2QBI6EEOLdndpj9Q'
                 '&maxResults=50')
         .then((value) {
-          Map<String, dynamic> response = jsonDecode(value.body);
-          setState(() {
-            playlists = response['items'];
-          });
+      Map<String, dynamic> response = jsonDecode(value.body);
+      setState(() {
+        // filtra as playlists conforme a lista de ids
+        for (var item in response['items']) {
+          // indexOf(element) = retorna o index do elemento buscado
+          if (ids.indexOf(item['id']) != -1) 
+            playlists.add(item);
+        }
+        // playlists = response['items'];
       });
+    }).catchError((err) {
+      print(err);
+    });
   }
 
   @override
@@ -43,6 +56,7 @@ class _HomeState extends State<Home> {
           itemCount: playlists.length,
           itemBuilder: (context, index) {
             return CardPlaylist(
+              id: playlists[index]['id'],
               image: playlists[index]['snippet']['thumbnails']['medium']['url'],
               title: playlists[index]['snippet']['title'],
             );
