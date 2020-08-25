@@ -47,7 +47,11 @@ class _VideoPlayState extends State<VideoPlay> {
                     }
                     setState(() {});
                   },
-                  child: Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
+                  child: Icon(
+                    _controller.value.isPlaying
+                        ? Icons.pause
+                        : Icons.play_arrow,
+                  ),
                 ),
               ],
             )

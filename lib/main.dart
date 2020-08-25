@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube/ui/home.dart';
+import 'package:youtube/ui/tabs.dart';
 
 void main() {
   runApp(
