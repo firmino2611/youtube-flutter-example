@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube/ui/awsome_video.dart';
 import 'package:youtube/ui/video_play.dart';
+import 'package:youtube/ui/youtube_play.dart';
 
 class ListCardUi extends StatefulWidget {
   final List items;
@@ -28,8 +30,8 @@ class _ListCardUiState extends State<ListCardUi> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (BuildContext context) => VideoPlay(
-                      link: widget.items[index]['link'],
+                    builder: (BuildContext context) => YoutubePlay(
+                      url: widget.items[index]['link'],
                     ),
                   ),
                 );

@@ -22,6 +22,7 @@ class _VideoPlayState extends State<VideoPlay> {
         setState(() {});
         _controller.play();
       });
+
   }
 
   @override
