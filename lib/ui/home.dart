@@ -44,6 +44,18 @@ class _HomeState extends State<Home> {
     });
   }
 
+  List<Map<String, dynamic>> testApi = [
+    {
+      'nome': 'LUcas'
+    },
+    {
+      'nome': 'LUcas'
+    },
+    {
+      'nome': 'LUcas'
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
