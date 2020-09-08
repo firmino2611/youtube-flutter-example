@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:youtube/ui/home.dart';
-import 'package:youtube/ui/tabs.dart';
+import 'package:youtube/ui/exercicios/listas.dart';
+
 
 void main() {
   runApp(
@@ -11,7 +11,7 @@ void main() {
         primaryColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: Lista(),
     ),
   );
 }

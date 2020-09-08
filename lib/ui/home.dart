@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
 
-    http.get('http://192.168.0.45:8000/api/videos?category=2').then((value) {
+    http.get('http://127.0.0.1:8000/api/videos?category=2').then((value) {
       List<dynamic> response = jsonDecode(value.body);
 
       setState(() {
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
       print(err);
     });
 
-    http.get('http://192.168.0.45:8000/api/videos?category=1').then((value) {
+    http.get('http://127.0.0.1:8000/api/videos?category=1').then((value) {
       List<dynamic> response = jsonDecode(value.body);
 
       setState(() {
