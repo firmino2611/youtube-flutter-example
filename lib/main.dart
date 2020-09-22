@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube/ui/exercicios/future_example.dart';
-import 'package:youtube/ui/exercicios/get.dart';
-import 'package:youtube/ui/exercicios/listas.dart';
-
+import 'package:youtube/ui/video_image/list_videos_image.dart';
 
 void main() {
   runApp(
@@ -13,7 +10,7 @@ void main() {
         primaryColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FutureExample(),
+      home: ListVideoImage(),
     ),
   );
 }

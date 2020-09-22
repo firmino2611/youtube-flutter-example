@@ -17,8 +17,14 @@ class CardPlaylist extends StatelessWidget {
       elevation: 5,
       child: InkWell(
         onTap: () async {
-          Navigator.of(context)
-            .push( MaterialPageRoute(builder: (BuildContext context) => Video(id: this.id, playlistName: this.title,) ));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => Video(
+                id: this.id,
+                playlistName: this.title,
+              ),
+            ),
+          );
         },
         child: Container(
           height: 200,
