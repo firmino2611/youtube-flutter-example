@@ -10,7 +10,13 @@ void main() {
         primaryColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ListVideoImage(),
+      home: Scaffold(
+        body: InkWell(
+          child: Image.network(
+              'https://s2.glbimg.com/nksCDlmBan7iiSCgJqZdN7A5ekc=/e.glbimg.com/og/ed/f/original/2019/10/22/6th-place_small-white-hair-spider_javier-ruperez_nikon-small-world.jpg',
+              fit: BoxFit.fitHeight,),
+        ),
+      ),
     ),
   );
 }

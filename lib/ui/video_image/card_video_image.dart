@@ -36,7 +36,7 @@ class _CardVideoImageState extends State<CardVideoImage> {
       margin: EdgeInsets.only(bottom: 50),
       elevation: 10,
       child: Container(
-        height: 200,
+        height: widget.media['type'] == 'video' ? 400 : null ,
         child: Column(
           children: [
             widget.media['type'] == 'video'
