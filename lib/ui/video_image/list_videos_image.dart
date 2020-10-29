@@ -27,7 +27,8 @@ class _ListVideoImageState extends State<ListVideoImage> {
       body: FutureBuilder(
         // FutureBuilder é componente que renderiza de acordo com a resposta da requisição
         future: http.get(
-            'http://192.168.0.143:8000/api/videos'), // A chamada para api (ou qualquer chamada assincrona)
+          'http://192.168.0.143:8000/api/videos',
+        ), // A chamada para api (ou qualquer chamada assincrona)
         // initialData: http.Response,
         builder: (context, snapshot) {
           // Verifica se foi retornadoa alguma informação da requisição, pois mesmo sem ter terminado a requisição o builder é chamado.
@@ -39,8 +40,8 @@ class _ListVideoImageState extends State<ListVideoImage> {
               itemCount: listaApi.length,
               itemBuilder: (context, index) {
                 return CardVideoImage(
-                      media: listaApi[index],
-                    );
+                  media: listaApi[index],
+                );
               },
             );
           }
